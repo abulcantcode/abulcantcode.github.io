@@ -12,7 +12,7 @@ const MenuOverlay = ({ links }: TMenuOverlay) => {
       {links.map(({ title, path }, index) => (
         <li
           key={index}
-          className='py-3 text-gray-500 hover:text-black font-semibold'
+          className='py-3 text-gray-500 hover:text-black dark:text-[#b3b3a5] dark:hover:text-[#e6e6dd] font-semibold'
         >
           <NavLink href={path} title={title}></NavLink>
         </li>

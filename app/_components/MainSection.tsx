@@ -7,12 +7,12 @@ const MainSection = () => {
   return (
     <section className=''>
       <div className='mt-24 md:mt-36 flex justify-center'>
-        <h1 className='text-red-900 mb-4 font-extrabold text-center'>
-          <span className='text-transparent bg-clip-text bg-gradient-to-r dark:from-red-900 dark:to-[#acae9e] from-black to-[#acae9e] text-xl sm:text-3xl lg:text-5xl'>
+        <h1 className='text-black dark:text-red-900 mb-4 font-extrabold text-center'>
+          <span className='text-transparent bg-clip-text bg-gradient-to-r dark:from-red-900 dark:to-[#acae9e] from-black to-[#acae9e] text-3xl lg:text-5xl'>
             Hello, I&apos;m{" "}
           </span>
           <br></br>
-          <div className='text-3xl sm:text-5xl lg:text-7xl px-auto'>
+          <div className='text-5xl lg:text-7xl px-auto'>
             <TypeAnimation
               sequence={[
                 "A Computer Science Graduate",
@@ -40,7 +40,7 @@ const MainSection = () => {
           />
         </div>
       </div>
-      <div className='flex justify-center mt-6 md:mt-12 mx-16 text-center'>
+      <div className='flex justify-center mt-6 md:mt-12 mx-16 text-center mb-12'>
         <p className='max-w-screen-lg text-black dark:text-white font-semibold text-lg'>
           I am a highly motivated and results-driven Computer Science graduate.
           My educational journey has equipped me with a strong foundation in

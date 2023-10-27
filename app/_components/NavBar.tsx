@@ -13,7 +13,7 @@ export type TNavLinks = typeof navLinks;
 const navLinks = [
   {
     title: "Home",
-    path: "../",
+    path: "/",
   },
   {
     title: "Experience",
@@ -23,10 +23,6 @@ const navLinks = [
     title: "Projects",
     path: "#projects",
   },
-  {
-    title: "Contact",
-    path: "#contact",
-  },
 ];
 
 const NavBar = () => {
@@ -35,13 +31,14 @@ const NavBar = () => {
   return (
     <nav
       className={classNames(
-        "fixed top-0 left-0 right-0 z-10 bg-[#e6e6dd] bg-opacity-80 md:bg-opacity-90 rounded-b-3xl ",
-        "md:max-w-[70%] md:mx-auto md:mt-6 md:rounded-full",
+        "fixed top-0 left-0 right-0 z-10 bg-[#e6e6dd] bg-opacity-80 rounded-b-3xl overflow-hidden",
+        "dark:bg-zinc-700 dark:bg-opacity-80",
+        "md:max-w-[70%] md:mx-auto md:mt-6 md:rounded-full md:bg-opacity-90",
         "xl:max-w-[60%] xl:mx-auto xl:mt-8"
       )}
     >
       <div className='flex flex-wrap items-center justify-between mx-auto py-4 px-3 md:px-10'>
-        <div className='hidden md:block'>
+        <div className='hidden md:block dark:invert'>
           <Image
             src='/images/abul.png'
             alt='logo-img'
@@ -50,7 +47,7 @@ const NavBar = () => {
             style={{ width: "auto" }}
           />
         </div>
-        <div className='block md:hidden ml-6'>
+        <div className='block md:hidden ml-6 dark:invert'>
           <Image
             src='/images/a.png'
             alt='logo-img'
@@ -59,36 +56,36 @@ const NavBar = () => {
             style={{ width: "auto" }}
           />
         </div>
-        <div className='mobile-menu block md:hidden mr-7'>
+        <div className='mobile-menu block md:hidden mx-auto'>
           {!navbarOpen ? (
             <button
               onClick={() => setNavbarOpen(true)}
-              className='text-black flex items-center'
+              className='text-black dark:text-[#b3b3a5] flex items-center'
             >
               <Bars3Icon className='h-8 w-8' />
             </button>
           ) : (
             <button
               onClick={() => setNavbarOpen(false)}
-              className='text-black flex items-center'
+              className='text-black dark:text-[#b3b3a5] flex items-center'
             >
               <XMarkIcon className='h-8 w-8' />
             </button>
           )}
         </div>
         <div className='menu hidden md:block md:w-auto mx-auto' id='navbar'>
-          <ul className='flex p-2 md:p-0 md:flex-row md:space-x-3 lg:space-x-10 xl:space-x-12 mt-0'>
+          <ul className='flex p-2 md:p-0 md:flex-row md:space-x-3 lg:space-x-10 xl:space-x-12 mt-0 items-center'>
             {navLinks.map(({ title, path }, index) => (
               <li
                 key={index}
-                className=' text-gray-500 hover:text-black font-semibold'
+                className=' text-gray-500 hover:text-black dark:text-[#b3b3a5] dark:hover:text-[#e6e6dd] font-semibold'
               >
                 <NavLink href={path} title={title} />
               </li>
             ))}
           </ul>
         </div>
-        <div className='mr-4 md:mr-2'>
+        <div className='mr-7 md:mr-2'>
           <DayNight />
         </div>
       </div>
