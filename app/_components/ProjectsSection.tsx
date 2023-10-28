@@ -5,15 +5,15 @@ import ProjectCard from "./ProjectCard";
 const SKILL_LST = [
   {
     skill: "Java",
-    image: "",
+    image: "/images/abul.png",
   },
   {
     skill: "C++",
-    image: "",
+    image: "/images/abul.png",
   },
   {
     skill: "SQL",
-    image: "",
+    image: "/images/abul.png",
   },
 ];
 
@@ -21,19 +21,47 @@ const TAGS = ["TAG 1", "HELLO TAG 2", "TAG 3", "HELLO I AM THE 4TH TAG"];
 
 const PROJECT_LST = [
   {
-    title: "Java",
-    description: ["x"],
+    title: "Final Year Project: Vehicle Maintenance App",
+    description: [
+      "Gathered requirements through user interviews and app analysis",
+      "Designed a robust system using UML diagrams, created an efficient NoSQL database, and developed a real-time maintenance storage app using Java on Firebase.",
+      "Gained valuable experience in Android software development, database design, and application deployment",
+    ],
     tags: [],
   },
   {
-    title: "Java",
-    description: ["y"],
+    title: "Analysis of Packet Capture",
+    description: [
+      "Conducted packet capture analysis, documenting malicious activity.",
+      "Identified network vulnerabilities exploited by the attacker, conducted in-depth packet analysis to recover stolen data, and generated a comprehensive recovery-focused report.",
+    ],
     tags: [""],
   },
   {
-    title: "Java",
-    description: ["z"],
-    tags: [""],
+    title: "Team Project",
+    description: [
+      "Modelled and designed the business system, creating necessary diagrams and documentation.",
+      "Developed a user-friendly GUI with Java and Swing, linked to an SQLite database using error-handling mechanisms.",
+      "Thoroughly tested the system with diverse test cases to ensure robust functionality.",
+    ],
+    tags: [],
+  },
+  {
+    title: "Robot Wars",
+    description: [
+      "Simulated 2D plane motion and collisions using the standard C++ library.",
+      "Ensured efficient, extensible code with headers, constants, references, and pointers. ",
+      "Employed vector manipulation functions like count_if and find_if. ",
+    ],
+    tags: [],
+  },
+  {
+    title: "Network Infrastructure for Community Needs",
+    description: [
+      "Deployed a star topology for 3 computer suites and 2 offices collaboratively with a team of 2. ",
+      "Installed ports, outlets, switches, and crafted CAT6 cables, integrating trunking to the central hub, and conducted thorough continuity tests to ensure faultless completion. ",
+    ],
+    tags: [],
   },
 ];
 
@@ -56,7 +84,7 @@ const ProjectsSection = () => {
               >
                 <p className='mr-2'>{content.skill}</p>
                 <Image
-                  src='/images/abul.png'
+                  src={content.image}
                   alt='logo-img'
                   width={20}
                   height={20}
@@ -81,7 +109,7 @@ const ProjectsSection = () => {
               </p>
             ))}
           </div>
-          <div className='flex justify-center w-full'>
+          <div className='flex justify-center w-full mt-1'>
             <div className='w-full'>
               {PROJECT_LST.map((content, index) => (
                 <ProjectCard

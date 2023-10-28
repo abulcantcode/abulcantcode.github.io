@@ -42,6 +42,15 @@ const EXP_DATA = [
         tags: [],
         logoSrc: "",
       },
+      {
+        title: "Waiter",
+        company: "Venue Central",
+        location: "Luton, UK",
+        dateWorked: "09/2011 - 06/2016",
+        description: "description",
+        tags: [],
+        logoSrc: "",
+      },
     ],
   },
 ];
@@ -57,36 +66,42 @@ const ExperienceSection = () => {
           <h2 className='text-3xl mb-6 text-black dark:text-white font-semibold'>
             Technical Experience
           </h2>
-          {EXP_DATA.find(
-            ({ title }) => title === "Tech Experience"
-          )?.content.map((content, index) => (
-            <ExperienceCard
-              {...content}
-              key={`exp-card-${index}`}
-            ></ExperienceCard>
-          ))}
+          <div className='mb-8'>
+            {EXP_DATA.find(
+              ({ title }) => title === "Tech Experience"
+            )?.content.map((content, index) => (
+              <ExperienceCard
+                {...content}
+                key={`exp-card-${index}`}
+              ></ExperienceCard>
+            ))}
+          </div>
           <h2 className='text-3xl mb-6 text-black dark:text-white font-semibold'>
             Education
           </h2>
-          {EXP_DATA.find(({ title }) => title === "Education")?.content.map(
-            (content, index) => (
-              <ExperienceCard
-                {...content}
-                key={`exp-card-${index}`}
-              ></ExperienceCard>
-            )
-          )}
+          <div className='mb-8'>
+            {EXP_DATA.find(({ title }) => title === "Education")?.content.map(
+              (content, index) => (
+                <ExperienceCard
+                  {...content}
+                  key={`exp-card-${index}`}
+                ></ExperienceCard>
+              )
+            )}
+          </div>
           <h2 className='text-3xl mb-6 text-black dark:text-white font-semibold'>
             Other Experience
           </h2>
-          {EXP_DATA.find(({ title }) => title === "Experience")?.content.map(
-            (content, index) => (
-              <ExperienceCard
-                {...content}
-                key={`exp-card-${index}`}
-              ></ExperienceCard>
-            )
-          )}
+          <div className='mb-8'>
+            {EXP_DATA.find(({ title }) => title === "Experience")?.content.map(
+              (content, index) => (
+                <ExperienceCard
+                  {...content}
+                  key={`exp-card-${index}`}
+                ></ExperienceCard>
+              )
+            )}
+          </div>
         </div>
       </div>
     </section>

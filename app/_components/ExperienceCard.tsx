@@ -21,7 +21,7 @@ const ExperienceCard = ({
   logoSrc,
 }: TTabData) => {
   return (
-    <div className='bg-[#e6e6dd] dark:bg-zinc-700 p-3 rounded-lg m-2 md:mb-14'>
+    <div className='bg-[#e6e6dd] dark:bg-zinc-700 p-3 rounded-lg m-2 md:mb-4'>
       <h2 className='text-xl font-semibold mb-1 ml-0.5 text-black dark:text-white'>
         {title}
       </h2>
