@@ -7,8 +7,8 @@ const MainSection = () => {
   return (
     <section className=''>
       <div className='mt-24 md:mt-36 flex justify-center'>
-        <h1 className='text-black dark:text-red-900 mb-4 font-extrabold text-center'>
-          <span className='text-transparent bg-clip-text bg-gradient-to-r dark:from-red-900 dark:to-[#acae9e] from-black to-[#acae9e] text-3xl lg:text-5xl'>
+        <h1 className='text-green-900 dark:text-orange-400 mb-4 font-extrabold text-center'>
+          <span className='text-transparent bg-clip-text bg-gradient-to-r dark:from-orange-400 dark:to-[#acae9e] from-green-950 to-[#acae9e] text-3xl lg:text-5xl'>
             Hello, I&apos;m{" "}
           </span>
           <br></br>

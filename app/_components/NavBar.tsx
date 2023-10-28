@@ -85,7 +85,7 @@ const NavBar = () => {
             ))}
           </ul>
         </div>
-        <div className='mr-7 md:mr-2'>
+        <div className='mr-7 md:mr-2 w-12 h-12 md:w-10 md:h-10 overflow-hidden'>
           <DayNight />
         </div>
       </div>

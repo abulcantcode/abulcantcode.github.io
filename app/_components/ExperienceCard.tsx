@@ -21,22 +21,30 @@ const ExperienceCard = ({
   logoSrc,
 }: TTabData) => {
   return (
-    <div className='bg-zinc-700 p-3 rounded m-2 md:mb-14'>
-      <h2 className='text-xl font-semibold mb-1 ml-0.5'>{title}</h2>
+    <div className='bg-[#e6e6dd] dark:bg-zinc-700 p-3 rounded-lg m-2 md:mb-14'>
+      <h2 className='text-xl font-semibold mb-1 ml-0.5 text-black dark:text-white'>
+        {title}
+      </h2>
       <div className='mx-1'>
         <div className='mb-2 sm:flex items-center'>
           <div className='flex items-center'>
-            <BuildingOfficeIcon className='w-3 h-3 mr-1 text-gray-300' />
-            <p className='text-sm text-orange-300 font-semibold'>{company}</p>
+            <BuildingOfficeIcon className='w-3 h-3 mr-1 text-green-900 dark:text-gray-300' />
+            <p className='text-sm text-green-700 dark:text-orange-300 font-semibold'>
+              {company}
+            </p>
           </div>
-          <p className='text-xs pl-2 text-gray-400'>{location}</p>
+          <p className='text-xs pl-2 text-gray-700 dark:text-gray-400'>
+            {location}
+          </p>
         </div>
-        <div className='flex items-center mb-1 text-gray-300'>
-          <CalendarIcon className='w-3 h-3 mr-1' />
-          <p className='text-xs'>{dateWorked}</p>
+        <div className='flex items-center mb-1'>
+          <CalendarIcon className='w-3 h-3 mr-1  text-green-900 dark:text-gray-300' />
+          <p className='text-xs text-gray-800 dark:text-gray-300'>
+            {dateWorked}
+          </p>
         </div>
         <hr className='w-10 mt-2 border-gray-400'></hr>
-        <div className='my-1 text-gray-300 text-xs'>
+        <div className='my-1 text-gray-800 dark:text-gray-300 text-xs'>
           <p>{description}</p>
         </div>
       </div>
@@ -45,7 +53,7 @@ const ExperienceCard = ({
           {tags.map((tag, index) => (
             <p
               key={`tag-name-${index}`}
-              className='text-xs border-orange-400 border rounded-lg px-2 pt-0.5 pb-1 text-orange-300'
+              className='text-xs border-green-700 text-green-800 dark:border-orange-400 dark:text-orange-300 border rounded-lg px-2 pt-0.5 pb-1 '
             >
               {tag}
             </p>
