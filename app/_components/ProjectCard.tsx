@@ -5,9 +5,10 @@ interface TProjectData {
   title: string;
   description: string[];
   tags: string[];
+  filterTag: string;
 }
 
-const ProjectCard = ({ title, description, tags }: TProjectData) => {
+const ProjectCard = ({ title, description, tags, filterTag }: TProjectData) => {
   return (
     <div className='bg-[#e6e6dd] dark:bg-zinc-700 p-3 rounded-lg m-2 md:mb-4'>
       <h2 className='text-xl font-semibold ml-0.5 text-black dark:text-white'>
@@ -21,16 +22,18 @@ const ProjectCard = ({ title, description, tags }: TProjectData) => {
           ))}
         </ul>
       </div>
-      {tags
-        .filter((tag) => !!tag)
-        .map((tag, index) => (
-          <p
-            key={`tag-name-${index}`}
-            className='text-xs border-green-700 text-green-800 dark:border-orange-400 dark:text-orange-300 border rounded-lg px-2 pt-0.5 pb-1 w-fit'
-          >
-            {tag}
-          </p>
-        ))}
+      <div className='w-full flex flex-wrap gap-1'>
+        {tags
+          .filter((tag) => !!tag)
+          .map((tag, index) => (
+            <p
+              key={`tag-name-${index}`}
+              className=' text-xs border-green-700 text-green-800 dark:border-orange-400 dark:text-orange-300 border rounded-lg px-2 pt-0.5 pb-1 w-fit'
+            >
+              {tag}
+            </p>
+          ))}
+      </div>
     </div>
   );
 };

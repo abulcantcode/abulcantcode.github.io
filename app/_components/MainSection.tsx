@@ -41,15 +41,31 @@ const MainSection = () => {
         </div>
       </div>
       <div className='flex justify-center mt-6 md:mt-12 mx-16 text-center mb-12'>
-        <p className='max-w-screen-lg text-black dark:text-white font-semibold text-lg'>
-          I am a highly motivated and results-driven Computer Science graduate.
-          My educational journey has equipped me with a strong foundation in
-          software development. I have a genuine passion for tackling complex
-          problems and continuously expanding my knowledge. My coding journey,
-          which began at the age of thirteen, has allowed me to master multiple
-          languages, enabling me to adapt seamlessly to various programming
-          environments.
-        </p>
+        <div className='flex flex-col'>
+          <p className='max-w-screen-lg text-black dark:text-white font-semibold text-lg'>
+            I&apos;m a Computer Science graduate with a passion for technology
+            and a love for cars. I find immense joy in working on cars—both mine
+            and my family&apos;s—solving problems under the hood, and ensuring
+            they run smoothly. When I&apos;m not tinkering with engines,
+            you&apos;ll often find me glued to football matches, enjoying the
+            thrill of the game.
+          </p>
+          <br />
+          <p className='max-w-screen-lg text-black dark:text-white font-semibold text-lg'>
+            My journey in the world of coding started when I was just thirteen,
+            and it has been an exciting ride ever since. I thrive on tackling
+            challenging problems, continuously expanding my knowledge, and
+            mastering various programming languages. This love for
+            problem-solving and my genuine enthusiasm for software development
+            drive me to excel in every project I undertake.
+          </p>
+          <br />
+          <p className='max-w-screen-lg text-black dark:text-white font-semibold text-lg'>
+            I&apos;m not just a computer enthusiast; I&apos;m a highly motivated
+            and results-driven individual, ready to make a difference in the
+            tech world. Let&apos;s embark on this coding adventure together!
+          </p>
+        </div>
       </div>
     </section>
   );

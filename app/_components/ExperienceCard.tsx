@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { BuildingOfficeIcon, CalendarIcon } from "@heroicons/react/24/solid";
 
 interface TTabData {
@@ -60,12 +61,13 @@ const ExperienceCard = ({
           ))}
         </div>
         <div className='flex justify-end w-full mr-1'>
-          <p>
-            logo
-            {
-              //NEED TO ADD IMAGE REF
-            }
-          </p>
+          <Image
+            src={logoSrc}
+            alt='company_img'
+            width={45}
+            height={45}
+            style={{ width: "auto" }}
+          />
         </div>
       </div>
     </div>
