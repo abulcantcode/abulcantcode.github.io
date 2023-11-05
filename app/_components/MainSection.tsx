@@ -31,12 +31,12 @@ const MainSection = () => {
         </h1>
       </div>
       <div className='flex justify-center mt-4 mx-16'>
-        <div className='rounded-full overflow-hidden grayscale'>
+        <div className='rounded-full overflow-hidden grayscale md:w-[250px] w-[175px]'>
           <Image
             src='/images/abul.jpg'
             alt='me-img'
-            width={300}
-            height={300}
+            width={250}
+            height={250}
             style={{ width: "auto" }}
           />
         </div>
