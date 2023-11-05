@@ -16,7 +16,7 @@ const ProjectCard = ({ title, description, tags, filterTag }: TProjectData) => {
       </h2>
       <div className='mx-1'>
         <hr className='w-10 mt-1 mb-2 border-gray-400'></hr>
-        <ul className='bullets my-1 text-gray-800 dark:text-gray-300 text-xs'>
+        <ul className='bullets my-1 text-gray-800 dark:text-gray-300 text-sm md:text-md'>
           {description.map((content, index) => (
             <li key={`descrip-${index}`}>{content}</li>
           ))}
@@ -28,7 +28,7 @@ const ProjectCard = ({ title, description, tags, filterTag }: TProjectData) => {
           .map((tag, index) => (
             <p
               key={`tag-name-${index}`}
-              className=' text-xs border-green-700 text-green-800 dark:border-orange-400 dark:text-orange-300 border rounded-lg px-2 pt-0.5 pb-1 w-fit'
+              className=' text-xs font-semibold border-green-700 text-green-800 dark:border-orange-400 dark:text-orange-300 border rounded-lg px-2 pt-0.5 pb-1 w-fit'
             >
               {tag}
             </p>

@@ -31,10 +31,13 @@ const NavBar = () => {
   return (
     <nav
       className={classNames(
-        "fixed top-0 left-0 right-0 z-10 bg-[#e6e6dd] bg-opacity-80 rounded-b-3xl overflow-hidden",
-        "dark:bg-zinc-700 dark:bg-opacity-80",
-        "md:max-w-[70%] md:mx-auto md:mt-6 md:rounded-full md:bg-opacity-90",
-        "xl:max-w-[60%] xl:mx-auto xl:mt-8"
+        "fixed top-0 left-0 right-0 z-10 bg-[#e6e6dd] rounded-b-3xl overflow-hidden",
+        "dark:bg-zinc-700",
+        "md:max-w-[70%] md:mx-auto md:mt-6 md:rounded-full",
+        "xl:max-w-[60%] xl:mx-auto xl:mt-8",
+        navbarOpen
+          ? "bg-opacity-90  md:bg-opacity-80 dark:bg-opacity-90"
+          : "bg-opacity-70 md:bg-opacity-80 dark:bg-opacity-80"
       )}
     >
       <div className='flex flex-wrap items-center justify-between mx-auto py-4 px-3 md:px-10'>

@@ -6,31 +6,87 @@ import classNames from "classnames";
 
 const SKILL_LST = [
   {
+    skill: "React",
+    image: "/images/react.webp",
+  },
+  {
+    skill: "NextJS",
+    image: "/images/nextjs.webp",
+  },
+  {
+    skill: "TypeScript",
+    image: "/images/typescript.webp",
+  },
+  {
+    skill: "JavaScript",
+    image: "/images/javascript.webp",
+  },
+  {
     skill: "Java",
-    image: "/images/abul.png",
+    image: "/images/java.webp",
+  },
+  {
+    skill: "Spring Boot",
+    image: "/images/spring-boot-logo.png",
+  },
+  {
+    skill: "AWS",
+    image: "/images/aws.webp",
+  },
+  {
+    skill: "Selenium",
+    image: "/images/Selenium_Logo.png",
+  },
+  {
+    skill: "Maven",
+    image: "/images/Maven.png",
   },
   {
     skill: "C++",
-    image: "/images/abul.png",
+    image: "/images/cpp.webp",
   },
   {
     skill: "SQL",
-    image: "/images/abul.png",
+    image: "/images/postgresql.webp",
+  },
+  {
+    skill: "Python",
+    image: "/images/python.webp",
+  },
+  {
+    skill: "CSS",
+    image: "/images/css.webp",
+  },
+  {
+    skill: "HTML",
+    image: "/images/html.webp",
+  },
+  {
+    skill: ".NET Framework",
+    image: "/images/dotnet.webp",
+  },
+  {
+    skill: "Docker",
+    image: "/images/docker.webp",
+  },
+  {
+    skill: "Git",
+    image: "/images/git.webp",
   },
 ];
 
-const TAGS = ["TAG 1", "HELLO TAG 2", "TAG 3", "HELLO I AM THE 4TH TAG"];
+const TAGS = ["Personal Projects", "University Projects"];
 
 const PROJECT_LST = [
   {
     title: "Time Management App (In Development)",
     description: [
-      "Collaborating with my brother on the development of a personalized time management application.",
+      "Collaborating with my brother on the development of a personalised time management application.",
       "Crafting features tailored to streamline tasks, including shopping, gym routines, and to-do lists.",
-      "Prioritizing intuitive user interfaces and seamless experiences for enhanced organization and productivity.",
+      "Prioritising intuitive user interfaces and seamless experiences for enhanced organisation and productivity.",
     ],
     tags: ["React", "Next JS", "Remix", "HTML", "JavaScript", "CSS", "SQL"],
-    filterTag: "TAG 1",
+    filterTag: "Personal Projects",
   },
   {
     title: "Final Year Project: Vehicle Maintenance App",
@@ -47,17 +103,17 @@ const PROJECT_LST = [
       "REST API",
       "UML Diagrams",
     ],
-    filterTag: "TAG 1",
+    filterTag: "University Projects",
   },
   {
     title: "Team Project: Cloud Group Messaging App",
     description: [
       "Developed an innovative group messaging and file sharing application.",
-      "Utilized AWS services to host both the application and its database.",
+      "Utilised AWS services to host both the application and its database.",
       "Implemented functionality enabling users to create private and public chat rooms.",
     ],
     tags: ["AWS", "HTML", "JavaScript", "CSS", "SQL"],
-    filterTag: "TAG 1",
+    filterTag: "University Projects",
   },
   {
     title: "Analysis of Packet Capture",
@@ -66,17 +122,17 @@ const PROJECT_LST = [
       "Identified network vulnerabilities exploited by the attacker, conducted in-depth packet analysis to recover stolen data, and generated a comprehensive recovery-focused report.",
     ],
     tags: ["Wireshark", "Linux"],
-    filterTag: "HELLO TAG 2",
+    filterTag: "University Projects",
   },
   {
-    title: "Team Project",
+    title: "Team Project: Bussiness Management System",
     description: [
       "Modelled and designed the business system, creating necessary diagrams and documentation.",
       "Developed a user-friendly GUI with Java and Swing, linked to an SQLite database using error-handling mechanisms.",
       "Thoroughly tested the system with diverse test cases to ensure robust functionality.",
     ],
     tags: ["Java", "SQL"],
-    filterTag: "TAG 1",
+    filterTag: "University Projects",
   },
   {
     title: "Robot Wars",
@@ -86,7 +142,7 @@ const PROJECT_LST = [
       "Employed vector manipulation functions like count_if and find_if. ",
     ],
     tags: ["C++"],
-    filterTag: "TAG 3",
+    filterTag: "University Projects",
   },
   {
     title: "Network Infrastructure for Community Needs",
@@ -95,7 +151,16 @@ const PROJECT_LST = [
       "Installed ports, outlets, switches, and crafted CAT6 cables, integrating trunking to the central hub, and conducted thorough continuity tests to ensure faultless completion. ",
     ],
     tags: [],
-    filterTag: "TAG 3",
+    filterTag: "Personal Projects",
+  },
+  {
+    title: "Natural Learning AI Game",
+    description: [
+      "Developed a game inspired by 'Flappy Birds' using PyGame.",
+      "Utilised a Natural Learning Library (NEAT) to create multiple versions of the main character and iteratively trained them across generations to learn how to play the game.",
+    ],
+    tags: ["Python", "PyGame", "NEAT"],
+    filterTag: "Personal Projects",
   },
 ];
 
@@ -112,20 +177,26 @@ const ProjectsSection = () => {
           <h2 className='text-3xl mb-4 text-black dark:text-white font-semibold'>
             Skills:
           </h2>
-          <div className='flex'>
+          <div className='flex flex-wrap content-center'>
             {SKILL_LST.map((content, index) => (
               <div
-                className='text-black dark:text-white bg-[#e6e6dd] dark:bg-zinc-700 rounded-es-xl w-fit h-fit flex justify-center p-2 m-2'
+                className='text-black dark:text-white bg-[#e6e6dd] dark:bg-zinc-700 rounded-es-xl flex items-center p-2 m-2 text-center'
                 key={`skill-${index}`}
               >
                 <p className='mr-2'>{content.skill}</p>
-                <Image
-                  src={content.image}
-                  alt='logo-img'
-                  width={20}
-                  height={20}
-                  style={{ width: "auto", height: "auto" }}
-                />
+                <div className='w-[17px] h-[17px]'>
+                  <Image
+                    src={content.image}
+                    alt='logo-img'
+                    width={17}
+                    height={17}
+                    style={{
+                      width: "auto",
+                      height: "auto",
+                      aspectRatio: "1/1",
+                    }}
+                  />
+                </div>
               </div>
             ))}
           </div>

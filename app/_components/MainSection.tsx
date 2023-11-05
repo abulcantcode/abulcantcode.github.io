@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
+import { EnvelopeIcon } from "@heroicons/react/24/solid";
 
 const MainSection = () => {
   return (
@@ -30,25 +31,32 @@ const MainSection = () => {
         </h1>
       </div>
       <div className='flex justify-center mt-4 mx-16'>
-        <div className='rounded-2xl overflow-hidden'>
+        <div className='rounded-full overflow-hidden grayscale'>
           <Image
             src='/images/abul.jpg'
-            alt='hero-img'
+            alt='me-img'
             width={300}
             height={300}
             style={{ width: "auto" }}
           />
         </div>
       </div>
+      <div className='flex justify-center mt-8 mx-16'>
+        <a
+          href='mailto: abulchwdhury@gmail.com'
+          className='flex items-center border-2 rounded-full p-4 text-green-700 dark:text-orange-400 font-semibold border-green-800 dark:border-orange-400'
+        >
+          <EnvelopeIcon className='h-6 w-6 mr-2' /> Contact Me
+        </a>
+      </div>
       <div className='flex justify-center mt-6 md:mt-12 mx-16 text-center mb-12'>
         <div className='flex flex-col'>
           <p className='max-w-screen-lg text-black dark:text-white font-semibold text-lg'>
             I&apos;m a Computer Science graduate with a passion for technology
-            and a love for cars. I find immense joy in working on cars—both mine
-            and my family&apos;s—solving problems under the hood, and ensuring
-            they run smoothly. When I&apos;m not tinkering with engines,
-            you&apos;ll often find me glued to football matches, enjoying the
-            thrill of the game.
+            and a love for cars. I find joy in working on cars, solving problems
+            under the hood, and ensuring they run smoothly. When I&apos;m not
+            tinkering with engines, you&apos;ll often find me glued to football
+            matches, enjoying the thrill of the game.
           </p>
           <br />
           <p className='max-w-screen-lg text-black dark:text-white font-semibold text-lg'>
@@ -63,7 +71,7 @@ const MainSection = () => {
           <p className='max-w-screen-lg text-black dark:text-white font-semibold text-lg'>
             I&apos;m not just a computer enthusiast; I&apos;m a highly motivated
             and results-driven individual, ready to make a difference in the
-            tech world. Let&apos;s embark on this coding adventure together!
+            tech world!
           </p>
         </div>
       </div>

@@ -7,9 +7,10 @@ interface TTabData {
   company: string;
   location: string;
   dateWorked: string;
-  description: string;
+  description: string[];
   tags: string[];
   logoSrc: string;
+  imgW: number;
 }
 
 const ExperienceCard = ({
@@ -20,6 +21,7 @@ const ExperienceCard = ({
   description,
   tags,
   logoSrc,
+  imgW,
 }: TTabData) => {
   return (
     <div className='bg-[#e6e6dd] dark:bg-zinc-700 p-3 rounded-lg m-2 md:mb-4'>
@@ -45,8 +47,12 @@ const ExperienceCard = ({
           </p>
         </div>
         <hr className='w-10 mt-2 border-gray-400'></hr>
-        <div className='my-1 text-gray-800 dark:text-gray-300 text-xs'>
-          <p>{description}</p>
+        <div className='my-1 text-gray-800 dark:text-gray-300 text-sm md:text-md'>
+          <ul className='bullets my-1 text-gray-800 dark:text-gray-300 text-sm md:text-md'>
+            {description.map((content, index) => (
+              <li key={`descrip-${index}`}>{content}</li>
+            ))}
+          </ul>
         </div>
       </div>
       <div className='flex grid-cols-2 items-center mt-2'>
@@ -54,18 +60,18 @@ const ExperienceCard = ({
           {tags.map((tag, index) => (
             <p
               key={`tag-name-${index}`}
-              className='text-xs border-green-700 text-green-800 dark:border-orange-400 dark:text-orange-300 border rounded-lg px-2 pt-0.5 pb-1 '
+              className='text-xs font-semibold border-green-700 text-green-800 dark:border-orange-400 dark:text-orange-300 border rounded-lg px-2 pt-0.5 pb-1 '
             >
               {tag}
             </p>
           ))}
         </div>
-        <div className='flex justify-end w-full mr-1'>
+        <div className='flex justify-end mr-1 dark:invert mt-auto mb-1'>
           <Image
             src={logoSrc}
             alt='company_img'
-            width={45}
-            height={45}
+            width={imgW}
+            height={60}
             style={{ width: "auto" }}
           />
         </div>
