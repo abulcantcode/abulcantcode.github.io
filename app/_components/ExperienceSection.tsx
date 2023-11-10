@@ -14,7 +14,7 @@ const EXP_DATA = [
           "Played a pivotal role in developing ET2, an internationally used insurance broking web application.",
           "Collaborated closely with stakeholders to design requirements and implement bug fixes using the Test-Driven Development (TDD) approach.",
           "Expertise in integrating external web services through REST APIs and Maven, enhancing application functionality and user experience.",
-          "Ensured build stability by implementing automated tests using tools like Selenium, Cucumber, and Docker.",
+          "Ensured build stability by implementing automated integration tests using tools like Selenium, Cucumber, and Docker.",
           "Actively participated in Agile development team activities, including sprint retrospectives, proposing process enhancements, assisting with build issues, and reviewing pull requests.",
         ],
         tags: [
